@@ -1,0 +1,6 @@
+name: ablation_gnn_indep_mlp
+
+defaults_from: main.yaml
+
+model:
+  twin_variant: independent_mlp

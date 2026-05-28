@@ -1,0 +1,6 @@
+name: ablation_gnn_concat_mlp
+
+defaults_from: main.yaml
+
+model:
+  twin_variant: concatenated_mlp

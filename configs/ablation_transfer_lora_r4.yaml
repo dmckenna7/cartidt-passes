@@ -1,0 +1,8 @@
+name: ablation_transfer_lora_r4
+
+defaults_from: main.yaml
+
+model:
+  lora_rank: 4
+  lora_alpha: 8
+  depth_interp: true

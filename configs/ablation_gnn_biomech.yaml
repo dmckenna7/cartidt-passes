@@ -1,0 +1,6 @@
+name: ablation_gnn_biomech
+
+defaults_from: main.yaml
+
+model:
+  twin_variant: biomech_graph

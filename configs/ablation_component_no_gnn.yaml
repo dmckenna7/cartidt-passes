@@ -1,0 +1,7 @@
+name: ablation_component_no_gnn
+
+defaults_from: main.yaml
+
+model:
+  twin_variant: independent_mlp
+  sage_layers: 0

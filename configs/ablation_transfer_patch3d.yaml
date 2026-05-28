@@ -1,0 +1,10 @@
+name: ablation_transfer_patch3d
+
+defaults_from: main.yaml
+
+model:
+  lora_rank: 0
+  lora_alpha: 0
+  full_finetune: false
+  depth_interp: false
+  patch_3d: true

@@ -1,0 +1,8 @@
+name: ablation_component_no_lora
+
+defaults_from: main.yaml
+
+model:
+  lora_rank: 0
+  lora_alpha: 0
+  random_init_decoder: true

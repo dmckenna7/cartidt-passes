@@ -1,0 +1,54 @@
+name: main
+
+data:
+  name: iwoai
+  root: ./data/oai_zib
+  manifests_dir: ./data/manifests/iwoai
+  target_shape: [160, 384, 384]
+  batch_size: 4
+  num_workers: 8
+  augment:
+    rotation_deg: 10.0
+    scale_lo: 0.9
+    scale_hi: 1.1
+    translate_voxels: 15
+    elastic_sigma: 8.0
+    elastic_alpha: 12.0
+    noise_std: 0.02
+    gain_lo: 0.95
+    gain_hi: 1.05
+
+model:
+  use_tiny_vit: false
+  weights: vit_large_patch14_dinov2
+  pretrained: true
+  embed_dim: 1024
+  patch_size: 16
+  depth_stride: 4
+  lora_rank: 16
+  lora_alpha: 32
+  target_hw: [384, 384]
+  target_depth: 160
+  tap_layers: [5, 11, 17, 23]
+  decoder_dim: 256
+  ppm_scales: [1, 2, 3, 6]
+  num_seg_classes: 7
+  num_grades: 4
+  sage_hidden: 256
+  sage_layers: 3
+  evidence_hidden: 128
+  default_edge_weight: 1.0
+
+train:
+  seed: 42
+  epochs: 120
+  warmup_epochs: 5
+  anneal_epochs: 10
+  base_lr: 2.0e-4
+  min_lr: 1.0e-6
+  weight_decay: 1.0e-2
+  betas: [0.9, 0.999]
+  grad_accum: 2
+  max_grad_norm: 1.0
+  precision: bf16
+  mu: 0.5

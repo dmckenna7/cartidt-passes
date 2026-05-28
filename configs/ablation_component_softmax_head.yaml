@@ -1,0 +1,9 @@
+name: ablation_component_softmax_head
+
+defaults_from: main.yaml
+
+model:
+  head_variant: softmax
+
+train:
+  mu: 0.0

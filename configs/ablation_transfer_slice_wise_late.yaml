@@ -1,0 +1,10 @@
+name: ablation_transfer_slice_wise_late
+
+defaults_from: main.yaml
+
+model:
+  lora_rank: 0
+  lora_alpha: 0
+  full_finetune: false
+  depth_interp: false
+  fusion: slice_wise_late

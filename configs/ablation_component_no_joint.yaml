@@ -1,0 +1,6 @@
+name: ablation_component_no_joint
+
+defaults_from: main.yaml
+
+train:
+  schedule_variant: sequential

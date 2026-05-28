@@ -1,0 +1,7 @@
+name: ablation_component_uniform_edges
+
+defaults_from: main.yaml
+
+model:
+  twin_variant: biomech_graph
+  edge_weights: uniform

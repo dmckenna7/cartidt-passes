@@ -1,0 +1,7 @@
+name: ablation_component_fc_edges
+
+defaults_from: main.yaml
+
+model:
+  twin_variant: biomech_graph
+  edge_pattern: fully_connected

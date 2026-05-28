@@ -1,0 +1,18 @@
+name: ablation_transfer_full_ft
+
+defaults_from: main.yaml
+
+data:
+  name: iwoai
+
+model:
+  lora_rank: 0
+  lora_alpha: 0
+  full_finetune: true
+  depth_interp: true
+
+train:
+  base_lr: 5.0e-5
+  weight_decay: 5.0e-2
+  epochs: 120
+  seed: 42

@@ -1,0 +1,7 @@
+name: ablation_gnn_self_attn
+
+defaults_from: main.yaml
+
+model:
+  twin_variant: self_attention
+  attention_heads: 4

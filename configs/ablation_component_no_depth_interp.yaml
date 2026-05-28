@@ -1,0 +1,6 @@
+name: ablation_component_no_depth_interp
+
+defaults_from: main.yaml
+
+model:
+  depth_interp: false
